@@ -505,18 +505,92 @@
     let savedVelocity = { vx: 0, vy: 0, autoMoving: false };
 
     // Ваши задачи
-    const TASKS = [
-      { question: "Сколько будет 54 плюс 17?", options: [ { text: "71", correct: true }, { text: "61", correct: false }, { text: "81", correct: false } ] },
-      { question: "К числу 27 прибавьте столько же. Чему равна сумма?", options: [ { text: "54", correct: true }, { text: "27", correct: false }, { text: "47", correct: false } ] },
-      { question: "Запишите число, которое на 18 больше, чем число 38", options: [ { text: "56", correct: true }, { text: "46", correct: false }, { text: "58", correct: false } ] },
-      { question: "Увеличьте 27 на 35", options: [ { text: "62", correct: true }, { text: "52", correct: false }, { text: "72", correct: false } ] },
-      { question: "Первое слагаемое 56, второе слагаемое 17. Найдите сумму", options: [ { text: "73", correct: true }, { text: "63", correct: false }, { text: "83", correct: false } ] },
-      { question: "Найдите сумму чисел 72 и 19", options: [ { text: "91", correct: true }, { text: "81", correct: false }, { text: "101", correct: false } ] },
-      { question: "Увеличьте число 46 на 15", options: [ { text: "61", correct: true }, { text: "51", correct: false }, { text: "71", correct: false } ] },
-      { question: "Выберите числовое выражение — сумму, значение которой равно 66", options: [ { text: "49 + 17", correct: true }, { text: "70 - 4", correct: false }, { text: "50 + 10", correct: false } ] },
-      { question: "Прямоугольник с равными сторонами — это…", options: [ { text: "квадрат", correct: true }, { text: "треугольник", correct: false }, { text: "круг", correct: false } ] },
-      { question: "У прямоугольника противоположные стороны…", options: [ { text: "равны", correct: true }, { text: "все разные", correct: false }, { text: "все равны", correct: false } ] }
-    ];
+   const TASKS = [
+  {
+    question: "Сколько будет 54 плюс 17?",
+    options: [
+      { text: "71", correct: true },
+      { text: "61", correct: false },
+      { text: "81", correct: false }
+    ]
+  },
+  {
+    question: "К числу 27 прибавьте столько же. Чему равна сумма?",
+    options: [
+      { text: "54", correct: true },
+      { text: "27", correct: false },
+      { text: "47", correct: false }
+    ]
+  },
+  {
+    question: "Запишите число, которое на 18 больше, чем число 38",
+    options: [
+      { text: "56", correct: true },
+      { text: "46", correct: false },
+      { text: "58", correct: false }
+    ]
+  },
+  {
+    question: "Увеличьте 27 на 35",
+    options: [
+      { text: "62", correct: true },
+      { text: "52", correct: false },
+      { text: "72", correct: false }
+    ]
+  },
+  {
+    question: "Первое слагаемое 56, второе слагаемое 17. Найдите сумму",
+    options: [
+      { text: "73", correct: true },
+      { text: "63", correct: false },
+      { text: "83", correct: false }
+    ]
+  },
+
+  // ✅ Добавлены задания на вычитание
+
+  {
+    question: "Найдите разность чисел 72 и 19",
+    options: [
+      { text: "53", correct: true },
+      { text: "63", correct: false },
+      { text: "43", correct: false }
+    ]
+  },
+  {
+    question: "Уменьшите число 46 на 15",
+    options: [
+      { text: "31", correct: true },
+      { text: "21", correct: false },
+      { text: "41", correct: false }
+    ]
+  },
+  {
+    question: "Сколько будет 90 минус 24?",
+    options: [
+      { text: "66", correct: true },
+      { text: "74", correct: false },
+      { text: "64", correct: false }
+    ]
+  },
+  {
+    question: "На сколько число 80 больше числа 35?",
+    options: [
+      { text: "45", correct: true },
+      { text: "55", correct: false },
+      { text: "35", correct: false }
+    ]
+  },
+  {
+    question: "Из числа 100 вычтите 28",
+    options: [
+      { text: "72", correct: true },
+      { text: "82", correct: false },
+      { text: "62", correct: false }
+    ]
+  }
+];
+
 
     function rand(min, max) { return Math.random() * (max - min) + min; }
     function distance(ax, ay, bx, by) { const dx = ax - bx; const dy = ay - by; return Math.sqrt(dx * dx + dy * dy); }
